@@ -1,4 +1,3 @@
-import test_snakes.battleJake2020.main
 import test_snakes.battleJake2019.main
 import test_snakes.battleJake2018.main
 import test_snakes.simpleJake.main
@@ -25,11 +24,6 @@ COLORS = {
 """
 
 SNAKES = [
-    {
-        "move": test_snakes.battleJake2020.main.move,
-        "name": "battleJake2020",
-        "color": COLORS["purple"]
-    },
     {
         "move": test_snakes.battleJake2019.main.move,
         "name": "battleJake2019",

@@ -56,7 +56,7 @@ class BattleSnake():
             if output_board: self.print_board()
 
             if self._check_winner(solo):
-                break
+                return self._check_winner(solo)
 
             while(time.time()-t1 <= float(100-speed)/float(100)): pass
 
@@ -218,7 +218,11 @@ class BattleSnake():
 
 
     def _check_winner(self, solo):
-        return (len(self.snakes) == 1 and not solo) or (len(self.snakes) == 0)
+        if len(self.snakes) == 1 and not solo:
+            return self.snakes[0].name
+        if len(self.snakes) == 0:
+            return "DRAW"
+        return False
 
 
 
